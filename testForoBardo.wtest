@@ -22,6 +22,20 @@ describe "testeo a los panelistas" {
 	fantino.hacerOpinarDeDeportes(totiPasman)
 	assert.equals(false,totiPasman.tieneSed())	
 	}
+
+	test "testeo a lizzyTagliani luego de que Polino la haga opinar"{
+	polino.hacerOpinarDeChimentos(lizzyTagliani)
+	assert.equals(0,lizzyTagliani.humor())	
+	}
+	
+	test "testeo a lizzyTagliani estando de mal humor luego de que Polino la haga opinar"{
+	lizzyTagliani.humor(-2)
+	polino.hacerOpinarDeChimentos(lizzyTagliani)
+	assert.equals(6,lizzyTagliani.humor())	
+	}
 }
+
+
+
 	
 	
