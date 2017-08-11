@@ -17,6 +17,11 @@ describe "testeo a los panelistas" {
 	fantino.hacerOpinarDeDeportes(totiPasman)
 	assert.equals(-10, totiPasman.soberbia())	
 	}
+	
+	test "testeo la sed de Pasman luego de que Fantino lo haga opinar"{
+	fantino.hacerOpinarDeDeportes(totiPasman)
+	assert.equals(false,totiPasman.tieneSed())	
+	}
 }
 	
 	
