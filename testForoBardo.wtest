@@ -1,0 +1,22 @@
+import foroBardo.*
+describe "testeo a los panelistas" {
+
+	test "voy a testear como queda Pagani sin estar caliente luego de que Fantino lo haga opinar" {
+	horacioPagani.nivelDeEnojo(5)
+	fantino.hacerOpinarDeDeportes(horacioPagani)
+		assert.equals(0, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "voy a testear como queda Pagani estando caliente luego de que Fantino lo haga opinar" {
+	horacioPagani.nivelDeEnojo(50)
+	fantino.hacerOpinarDeDeportes(horacioPagani)
+		assert.equals(48.60000, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "testeo a Pasman luego de que Fantino lo haga opinar"{
+	fantino.hacerOpinarDeDeportes(totiPasman)
+	assert.equals(-10, totiPasman.soberbia())	
+	}
+}
+	
+	
